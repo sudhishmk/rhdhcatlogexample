@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
+  name: mybackstage
   description: |
     Backstage is an open-source developer portal that puts the developer experience first.
   links:
@@ -14,10 +14,10 @@ metadata:
     - title: Discord Chat
       url: https://discord.com/invite/EBHEGzX
   annotations:
-    github.com/project-slug: backstage/backstage
+    github.com/project-slug: sudhishmk/mcdocsexample
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
 spec:
   type: library
-  owner: CNCF
+  owner: sudhish
   lifecycle: experimental
