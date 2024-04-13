@@ -3,6 +3,7 @@ site_name: 'example-docs'
 nav:
   - Home: index.md
   - Test: test.md
+  - New: additionalfile.md
 
 plugins:
   - techdocs-core
