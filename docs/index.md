@@ -2,4 +2,4 @@
 
 This is a basic example of documentation.
 
-By Suhdish
+By Sudhish
