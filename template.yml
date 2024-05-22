@@ -83,7 +83,7 @@ spec:
       action: publish:gitlab
       input:
         repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
-        token: gldt-kptUxAp8B3RRt7Qfxg8W
+        token: glpat-7tPz2VeGpGNiJYaaKSxp
 
 
     - id: register
