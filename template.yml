@@ -10,7 +10,7 @@ metadata:
     - flask
     - gitlab
 spec:
-  owner: group:sudnair
+  owner: group:sudhi4
   system: janus-idp
   type: service
 
