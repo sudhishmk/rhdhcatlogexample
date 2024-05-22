@@ -77,20 +77,6 @@ spec:
           port: ${{ parameters.port }}
           sourceControl: gitlab.com
 
-    - id: catalogTemplate
-      name: Generating the Catalog Info Component
-      action: fetch:template
-      input:
-        url: ../../../mcdocsexample/blob/main/catlog-info/
-        values:
-          orgName: ${{ parameters.orgName }}
-          repoName: ${{ parameters.repoName }}
-          owner: ${{ parameters.owner }}
-          system: ${{ parameters.system }}
-          applicationType: api
-          description: ${{ parameters.description }}
-          port: ${{ parameters.port }}
-          sourceControl: gitlab.com
 
     - id: publish
       name: Publishing to the Source Code Repository
