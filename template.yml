@@ -82,10 +82,8 @@ spec:
       name: Publishing to the Source Code Repository
       action: publish:gitlab
       input:
-        description: ${{ parameters.description }}
-        repoUrl: ${{ parameters.gitlabHost }}?owner=sudnair&repo=${{ parameters.repoName }}
-        defaultBranch: main
-        sourcePath: ./src
+        repoUrl: ${{ parameters.gitlabHost }}?owner=sudh4&repo=${{ parameters.repoName }}
+
 
     - id: register
       name: Registering the Catalog Info Component
