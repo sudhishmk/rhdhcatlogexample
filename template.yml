@@ -82,7 +82,7 @@ spec:
       name: Publishing to the Source Code Repository
       action: publish:gitlab
       input:
-        repoUrl: ${{ parameters.gitlabHost }}?owner=gitlab+deploy-token-4300046&repo=${{ parameters.repoName }}
+        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
         token:gldt-kptUxAp8B3RRt7Qfxg8W
 
 
