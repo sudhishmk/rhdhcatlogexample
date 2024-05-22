@@ -83,6 +83,7 @@ spec:
       action: publish:gitlab
       input:
         repoUrl: ${{ parameters.gitlabHost }}?owner=sudh4&repo=${{ parameters.repoName }}
+        token:gldt-kptUxAp8B3RRt7Qfxg8W
 
 
     - id: register
