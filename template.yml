@@ -77,14 +77,12 @@ spec:
           port: ${{ parameters.port }}
           sourceControl: gitlab.com
 
-
     - id: publish
       name: Publishing to the Source Code Repository
       action: publish:gitlab
       input:
-        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
+        repoUrl: ${{ parameters.gitlabHost }}?owner=sudhi4&repo=test
         token: glpat-7tPz2VeGpGNiJYaaKSxp
-
 
     - id: register
       name: Registering the Catalog Info Component
