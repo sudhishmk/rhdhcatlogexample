@@ -109,8 +109,6 @@ spec:
         repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
         defaultBranch: main
         token: glpat-7tPz2VeGpGNiJYaaKSxp
-        settings: { "initialize_with_readme": "true" }
-        sourcePath: ./src
 
     - id: register
       name: Registering the Catalog Info Component
