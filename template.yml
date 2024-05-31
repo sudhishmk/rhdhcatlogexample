@@ -92,13 +92,6 @@ spec:
           port: ${{ parameters.port }}
           sourceControl: gitlab.com
 
-    - id: pushChanges
-      action: gitlab:repo:push
-      name: Push changes to gitlab repository
-      input:
-        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
-        commitMessage: Initial Commit
-        branchName: main
 
     - id: publish
       name: Publishing to the Source Code Repository
