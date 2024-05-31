@@ -1,16 +1,16 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: my-gitlab-template
-  title: Test Gitlab App
-  description: Template to test gitlab
+  name: python-backend-template
+  title: Create a Python application in GitLab with a CI pipeline
+  description: Create a starter Python backend application in GitLab with a CI pipeline
   tags:
     - recommended
     - python
     - flask
     - gitlab
 spec:
-  owner: group:sudhi4
+  owner: group:aap-tools
   system: janus-idp
   type: service
 
@@ -27,7 +27,7 @@ spec:
         gitlabHost:
           title: Gitlab Host
           type: string
-          default: gitlab.com
+          default: gitlab.mtb.com
         orgName:
           title: Organization Name
           type: string
@@ -75,14 +75,34 @@ spec:
           applicationType: api
           description: ${{ parameters.description }}
           port: ${{ parameters.port }}
-          sourceControl: gitlab.com
+          sourceControl: gitlab.mtb.com
+
+    - id: catalogTemplate
+      name: Generating the Catalog Info Component
+      action: fetch:template
+      input:
+        url: ../../../skeletons/catalog-info/
+        values:
+          orgName: ${{ parameters.orgName }}
+          repoName: ${{ parameters.repoName }}
+          owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
+          applicationType: api
+          description: ${{ parameters.description }}
+          port: ${{ parameters.port }}
+          sourceControl: gitlab.mtb.com
 
     - id: publish
       name: Publishing to the Source Code Repository
       action: publish:gitlab
       input:
-        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
+        allowedHosts: ["${{ parameters.gitlabHost }}"]
+        description: ${{ parameters.description }}
+        repoUrl: ${{ parameters.gitlabHost }}?owner=3566&repo=${{ parameters.repoName }}
+        defaultBranch: main
         token: glpat-7tPz2VeGpGNiJYaaKSxp
+        settings: { "initialize_with_readme": "true" }
+        sourcePath: ./src
 
     - id: register
       name: Registering the Catalog Info Component
