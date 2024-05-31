@@ -2,8 +2,8 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: test-gitlab
-  title: Test gitlab
-  description:Test gitlab
+  title: Test_gitlab
+  description: Test gitlab
   tags:
     - recommended
     - python
