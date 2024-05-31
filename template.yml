@@ -1,16 +1,16 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: python-backend-template
-  title: Create a Python application in GitLab with a CI pipeline
-  description: Create a starter Python backend application in GitLab with a CI pipeline
+  name: test-gitlab
+  title: Test gitlab
+  description:Test gitlab
   tags:
     - recommended
     - python
     - flask
     - gitlab
 spec:
-  owner: group:aap-tools
+  owner: group:sudhi4
   system: janus-idp
   type: service
 
@@ -27,7 +27,7 @@ spec:
         gitlabHost:
           title: Gitlab Host
           type: string
-          default: gitlab.mtb.com
+          default: gitlab.com
         orgName:
           title: Organization Name
           type: string
@@ -75,7 +75,7 @@ spec:
           applicationType: api
           description: ${{ parameters.description }}
           port: ${{ parameters.port }}
-          sourceControl: gitlab.mtb.com
+          sourceControl: gitlab.com
 
     - id: catalogTemplate
       name: Generating the Catalog Info Component
@@ -90,7 +90,7 @@ spec:
           applicationType: api
           description: ${{ parameters.description }}
           port: ${{ parameters.port }}
-          sourceControl: gitlab.mtb.com
+          sourceControl: gitlab.com
 
     - id: publish
       name: Publishing to the Source Code Repository
@@ -98,7 +98,7 @@ spec:
       input:
         allowedHosts: ["${{ parameters.gitlabHost }}"]
         description: ${{ parameters.description }}
-        repoUrl: ${{ parameters.gitlabHost }}?owner=3566&repo=${{ parameters.repoName }}
+        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
         defaultBranch: main
         token: glpat-7tPz2VeGpGNiJYaaKSxp
         settings: { "initialize_with_readme": "true" }
