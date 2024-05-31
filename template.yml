@@ -81,7 +81,7 @@ spec:
       name: Publishing to the Source Code Repository
       action: publish:gitlab
       input:
-        repoUrl: ${{ parameters.gitlabHost }}?owner=sudhi4&repo=test
+        repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
         token: glpat-7tPz2VeGpGNiJYaaKSxp
 
     - id: register
