@@ -101,6 +101,7 @@ spec:
         description: ${{ parameters.description }}
         repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
         defaultBranch: main
+        settings: { "initialize_with_readme": "true" }
         token: glpat-7tPz2VeGpGNiJYaaKSxp
 
     - id: register
