@@ -100,7 +100,6 @@ spec:
         allowedHosts: ["${{ parameters.gitlabHost }}"]
         description: ${{ parameters.description }}
         repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
-        defaultBranch: main
         token: glpat-7tPz2VeGpGNiJYaaKSxp
 
     - id: register
