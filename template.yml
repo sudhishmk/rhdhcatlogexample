@@ -100,7 +100,6 @@ spec:
         allowedHosts: ["${{ parameters.gitlabHost }}"]
         description: ${{ parameters.description }}
         repoUrl: ${{ parameters.gitlabHost }}?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
-        token: glpat-7tPz2VeGpGNiJYaaKSxp
 
     - id: register
       name: Registering the Catalog Info Component
