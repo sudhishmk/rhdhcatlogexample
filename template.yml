@@ -91,7 +91,12 @@ spec:
           description: ${{ parameters.description }}
           port: ${{ parameters.port }}
           sourceControl: gitlab.com
-
+    
+    - id: debug
+      action: debug:log
+      input:
+        message: Listing files
+        listWorkspace: true
 
     - id: publish
       name: Publishing to the Source Code Repository
