@@ -1,0 +1,40 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: test-defaultpasswd
+  title: test-defaultpasswd
+  description: Test using default passwd
+  tags:
+    - recommended
+spec:
+  owner: group:sudhi4
+  system: janus-idp
+  type: service
+
+  parameters:
+    - title: Provide information about the new component
+      required:
+        - password
+      properties:
+        password:
+          title: Repo password
+          type: string
+          default: defghj
+          ui:field: Secret
+
+  steps:
+    - id: sourceCodeTemplate
+      name: Generating the Source Code Component
+      action: fetch:template
+      input:
+        url: ./skeleton
+        values:
+          password: ${{ parameters.password }}
+
+  output:
+    links:
+      - title: Open the Source Code Repository
+        url: ${{ steps.publish.output.remoteUrl }}
+      - title: Open the Catalog Info Component
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
