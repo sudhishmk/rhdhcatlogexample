@@ -30,6 +30,11 @@ spec:
         url: ./skeleton
         values:
           password: ${{ parameters.password }}
+    - id: catalogTemplate
+      name: Generating the Catalog Info Component
+      action: fetch:template
+      input:
+        url: sudhishmk/rhdhcatlogexample
 
   output:
     links:
