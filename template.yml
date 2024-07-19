@@ -61,7 +61,7 @@ spec:
           default: 5000
           description: Override the port exposed for the application
         password:
-          title: Repository password
+          title: Repo password
           type: string
           default: defghj
           ui:field: Secret
@@ -72,7 +72,7 @@ spec:
       action: fetch:template
       input:
         url: ./skeleton
-        values: 
+        values:
           password: ${{ parameters.password }}
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}
