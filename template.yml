@@ -73,7 +73,7 @@ spec:
       input:
         url: ./skeleton
         values: 
-          password:${{ parameters.password }}
+          password: ${{ parameters.password }}
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}
           owner: ${{ parameters.owner }}
