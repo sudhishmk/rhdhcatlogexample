@@ -73,7 +73,6 @@ spec:
       input:
         url: ./skeleton
         values:
-          password: ${{ parameters.password }}
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}
           owner: ${{ parameters.owner }}
@@ -81,6 +80,7 @@ spec:
           applicationType: api
           description: ${{ parameters.description }}
           port: ${{ parameters.port }}
+          password: ${{ parameters.password }}
           sourceControl: gitlab.com
 
     - id: catalogTemplate
