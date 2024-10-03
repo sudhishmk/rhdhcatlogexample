@@ -20,5 +20,5 @@ metadata:
     argocd/app-name: 'cluster-configs'
 spec:
   type: library
-  owner: sudhish
+  owner: sudhishnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
   lifecycle: experimental
