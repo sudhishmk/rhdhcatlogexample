@@ -17,7 +17,7 @@ metadata:
     github.com/project-slug: sudhishmk/mcdocsexample
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
-    argocd/app-name: 'cluster-configs'
+    argocd/app-name: 'KYVERNO-POLICIES-2'
 spec:
   type: library
   owner: sudhishnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
