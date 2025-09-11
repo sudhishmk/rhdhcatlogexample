@@ -19,6 +19,7 @@ metadata:
     lighthouse.com/website-url: https://backstage.io
     #argocd/app-name: 'KYVERNO-POLICIES1'
     argocd/app-selector: 'app=kyverno'
+    backstage.io/kubernetes-id: 'test-service'
 spec:
   type: library
   owner: sudhish Nair
