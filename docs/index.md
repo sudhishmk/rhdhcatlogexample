@@ -1,4 +1,4 @@
-# 🚀 30-Day Argo CD Mastery Plan
+# 🚀 20-Day Argo CD Mastery Plan
 
 Welcome! This repository contains the practical exercises for a 30-day learning plan designed to take you from an intermediate understanding of Argo CD to a production-ready, expert level.
 
