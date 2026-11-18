@@ -13,11 +13,12 @@ spec:
 
   parameters:
     - title: Provide information about the new component
+      required:
+        - password
       properties:
         password:
           title: Repo password
           type: string
-          default: defghj
           ui:field: Secret
 
   steps:
